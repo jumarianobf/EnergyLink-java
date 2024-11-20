@@ -23,7 +23,7 @@ public class LocalizacaoImpl implements LocalizacaoService {
 
     @Override
     public Localizacao createLocalizacao(LocalizacaoDTO request) {
-        Cidade cidade = cidadeRepository.findById(request.getIdCidade().getIdCidade())
+        Cidade cidade = cidadeRepository.findById(request.getIdCidade())
                 .orElseThrow(() -> new RuntimeException("Cidade Nao Encontrada: "));
 
         return localizacaoRepository.save(getLocalizacao(request, cidade));

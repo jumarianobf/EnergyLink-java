@@ -81,6 +81,7 @@ public class EntidadeBaseController {
         List<EntidadeBaseModel> responseModels = entidadeBaseList.stream()
                 .map(this::toResponseModel)
                 .collect(Collectors.toList());
+        responseModels.forEach(model -> model.add(linkTo(methodOn(EntidadeBaseController.class).getAllEntidadeBase()).withSelfRel()));
         return ResponseEntity.ok(responseModels);
     }
 

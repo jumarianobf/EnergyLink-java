@@ -36,7 +36,7 @@ public class CidadeImpl implements CidadeService {
 
     @Override
     public Cidade getById(Long id) throws ChangeSetPersister.NotFoundException {
-        if (estadoRepository.existsById(id)) {
+        if (cidadeRepository.existsById(id)) {
             return cidadeRepository.findById(id).get();
         } else {
             throw new ChangeSetPersister.NotFoundException();

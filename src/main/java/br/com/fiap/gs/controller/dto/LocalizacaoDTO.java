@@ -19,5 +19,5 @@ public class LocalizacaoDTO {
     private String cep;
 
     @NotNull(message = "O id da cidade não pode ser nulo")
-    private Cidade idCidade;
+    private Long idCidade;
 }

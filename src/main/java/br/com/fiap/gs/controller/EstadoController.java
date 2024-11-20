@@ -83,6 +83,7 @@ public class EstadoController {
         List<EstadoModel> responseModels = estados.stream()
                 .map(this::toResponseModel)
                 .collect(Collectors.toList());
+        responseModels.forEach(model -> model.add(linkTo(methodOn(EstadoController.class).getAllEstado()).withSelfRel()));
         return ResponseEntity.ok(responseModels);
     }
 

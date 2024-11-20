@@ -82,6 +82,7 @@ public class LocalizacaoController {
         List<LocalizacaoModel> responseModels = localizacaoList.stream()
                 .map(this::toResponseModel)
                 .collect(Collectors.toList());
+        responseModels.forEach(model -> model.add(linkTo(methodOn(LocalizacaoController.class).getAllLocalizacao()).withSelfRel()));
         return ResponseEntity.ok(responseModels);
     }
 
