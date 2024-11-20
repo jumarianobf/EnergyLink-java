@@ -10,9 +10,9 @@ O projeto visa resolver um dos maiores desafios no setor de energia sustentável
   
 ## Funcionalidades Principais
 1. **Cadastro de Entidades**  
-  - Tipos de Usuários: Gestão e cadastro de diferentes tipos de usuários no sistema, com funcionalidades específicas para cada perfil.
-  - Comunidade Produtora: Cadastro e gerenciamento de comunidades responsáveis pela produção de energia.
-  - Fábrica Parceira: Registro de fábricas parceiras, com informações relevantes para o vínculo com o sistema.
+   - Tipos de Usuários: Gestão e cadastro de diferentes tipos de usuários no sistema, com funcionalidades específicas para cada perfil.
+   - Comunidade Produtora: Cadastro e gerenciamento de comunidades responsáveis pela produção de energia.
+   - Fábrica Parceira: Registro de fábricas parceiras, com informações relevantes para o vínculo com o sistema.
 
 2. **Marketplace para Compra e Venda de Energia**  
    - Interface para compradores e vendedores realizarem transações diretas de energia.  
