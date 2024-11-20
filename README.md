@@ -2,10 +2,7 @@
 #### Plataforma de Distribuição de Energia Sustentável para Cidades Próximas 🌍⚡
 
 ## Descrição do Projeto
-Este repositório contém o desenvolvimento de uma **plataforma digital para conectar comunidades produtoras de energia limpa (eólica e solar) com fábricas e cidades próximas**. A solução promove:
-- **Autossuficiência energética regional**.
-- **Redução de custos** para empresas e comunidades.
-- **Sustentabilidade ambiental**, incentivando o uso de energia limpa.
+O projeto visa resolver um dos maiores desafios no setor de energia sustentável: a distribuição de energia renovável de maneira acessível, eficiente e regionalizada. Com um sistema que conecta produtores de energia limpa com consumidores locais, a plataforma proposta facilita a troca de energia sustentável em comunidades, promovendo a autossuficiência energética e a sustentabilidade.
 
 
   ##
