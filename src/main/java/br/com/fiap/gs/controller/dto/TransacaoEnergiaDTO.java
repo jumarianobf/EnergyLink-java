@@ -20,7 +20,7 @@ public class TransacaoEnergiaDTO {
     private Long idContrato; // ID do contrato de distribuição
 
     @NotNull(message = "A data não pode ser nula")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     private LocalDate dataTransacao; // Data da transação de energia
 
     @NotNull(message = "A quantidade de energia não pode ser nula")

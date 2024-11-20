@@ -24,10 +24,10 @@ public class MonitoramentoEnergiaDTO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     private LocalDate dataMonitoramento;
 
-    @NotNull(message = "A data do monitoramento não pode ser nula")
+    @NotNull(message = "A energia não pode ser nula")
     private BigDecimal energia;
 
-    @NotNull(message = "A data do monitoramento não pode ser nula")
-    @Size(max = 20, message = "O id da entidade deve ter no máximo 20 caracteres")
+    @NotNull(message = "O tipo do monitoramento não pode ser nula")
+    @Size(max = 20, message = "O tipo deve ter no máximo 20 caracteres")
     private String tipoMonitoramento;
 }

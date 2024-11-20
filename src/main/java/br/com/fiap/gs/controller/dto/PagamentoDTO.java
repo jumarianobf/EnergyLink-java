@@ -22,7 +22,7 @@ public class PagamentoDTO {
 
 
     @NotNull(message = "A data não pode ser nula")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     private LocalDate dataPagamento; // Data do pagamento
 
     @PositiveOrZero(message = "O valor do pagamento deve ser maior ou igual a zero")

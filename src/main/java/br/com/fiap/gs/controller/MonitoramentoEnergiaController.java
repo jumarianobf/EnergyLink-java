@@ -23,7 +23,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 @RestController
 @AllArgsConstructor
 @CrossOrigin(maxAge = 3600)
-@RequestMapping("api/montioramento-energia")
+@RequestMapping("api/monitoramento-energia")
 public class MonitoramentoEnergiaController {
 
         @Autowired
