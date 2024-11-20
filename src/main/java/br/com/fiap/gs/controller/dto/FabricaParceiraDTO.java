@@ -15,7 +15,7 @@ import java.math.BigDecimal;
 public class FabricaParceiraDTO {
 
     @NotNull(message = "O id da entidade não pode ser nulo")
-    private Long idIdentidade;
+    private Long idEntidade;
 
     @NotNull(message = "A localização não pode ser nula")
     private Long idLocalizacao;

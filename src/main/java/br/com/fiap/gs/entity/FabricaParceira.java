@@ -21,9 +21,9 @@ public class FabricaParceira {
     private Long idFabrica;
 
     @ManyToOne
-    @JoinColumn(name = "id_identidade", nullable = false)
+    @JoinColumn(name = "id_entidade", nullable = false)
     @NotNull
-    private EntidadeBase idIdentidade;
+    private EntidadeBase idEntidade;
 
     @ManyToOne
     @JoinColumn(name = "id_localizacao", nullable = false)

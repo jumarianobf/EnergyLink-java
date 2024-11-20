@@ -15,7 +15,7 @@ public class TipoUsuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_usuario", length = 10)
+    @Column(name = "id_tipo_usuario", length = 10)
     private Long idTipoUsuario;
 
     @Column(name = "descricao_tipo", length = 50)

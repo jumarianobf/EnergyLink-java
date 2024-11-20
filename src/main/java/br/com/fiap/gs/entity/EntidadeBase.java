@@ -18,7 +18,7 @@ public class EntidadeBase {
     @Column(name = "id_entidade", length = 10)
     private Long idEntidade;
 
-    @Column(name = "id_identidade", length = 100, nullable = false)
+    @Column(name = "nome_entidade", length = 100, nullable = false)
     @NotNull
     private String nomeEntidade;
 }

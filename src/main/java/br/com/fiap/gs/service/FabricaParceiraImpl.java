@@ -31,7 +31,7 @@ public class FabricaParceiraImpl implements FabricaParceiraService {
         Localizacao localizacao = localizacaoRepository.findById(fabrica.getIdLocalizacao())
                 .orElseThrow(() -> new RuntimeException("Localização não encontrada"));
 
-        EntidadeBase entidadeBase = entidadeBaseRepository.findById(fabrica.getIdIdentidade())
+        EntidadeBase entidadeBase = entidadeBaseRepository.findById(fabrica.getIdEntidade())
                 .orElseThrow(() -> new RuntimeException("Entidade não encontrada"));
 
         return fabricaParceriaRepository.save(getFabricaParceira(fabrica, entidadeBase, localizacao));
@@ -39,7 +39,7 @@ public class FabricaParceiraImpl implements FabricaParceiraService {
 
     private FabricaParceira getFabricaParceira(FabricaParceiraDTO fabrica, EntidadeBase entidadeBase,Localizacao localizacao) {
         return FabricaParceira.builder()
-                .idIdentidade(entidadeBase)
+                .idEntidade(entidadeBase)
                 .idLocalizacao(localizacao)
                 .demandaEnergiaFabrica(fabrica.getDemandaEnergiaFabrica())
                 .build();
@@ -67,10 +67,10 @@ public class FabricaParceiraImpl implements FabricaParceiraService {
         Localizacao localizacao = localizacaoRepository.findById(fabrica.getIdLocalizacao())
                 .orElseThrow(() -> new NoSuchElementException("Localização não encontrada com ID: " + fabrica.getIdLocalizacao()));
 
-        EntidadeBase entidadeBase = entidadeBaseRepository.findById(fabrica.getIdIdentidade())
-                .orElseThrow(() -> new RuntimeException("Entidade não encontrada com ID: " + fabrica.getIdIdentidade()));
+        EntidadeBase entidadeBase = entidadeBaseRepository.findById(fabrica.getIdEntidade())
+                .orElseThrow(() -> new RuntimeException("Entidade não encontrada com ID: " + fabrica.getIdEntidade()));
 
-        existingFabrica.setIdIdentidade(entidadeBase);
+        existingFabrica.setIdEntidade(entidadeBase);
         existingFabrica.setIdLocalizacao(localizacao);
         existingFabrica.setDemandaEnergiaFabrica(fabrica.getDemandaEnergiaFabrica());
 

@@ -122,7 +122,7 @@ public class FabricaParceiraController {
 
     private FabricaParceiraModel toResponseModel(FabricaParceira fabrica) {
         return new FabricaParceiraModel(
-                fabrica.getIdIdentidade().getIdEntidade(),
+                fabrica.getIdEntidade().getIdEntidade(),
                 fabrica.getIdLocalizacao().getIdLocalizacao(),
                 fabrica.getDemandaEnergiaFabrica()
         );
