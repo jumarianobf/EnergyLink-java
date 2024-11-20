@@ -1,5 +1,5 @@
 # Energy Link
-#### # Plataforma de Distribuição de Energia Sustentável para Cidades Próximas 🌍⚡
+#### Plataforma de Distribuição de Energia Sustentável para Cidades Próximas 🌍⚡
 
 ## Descrição do Projeto
 Este repositório contém o desenvolvimento de uma **plataforma digital para conectar comunidades produtoras de energia limpa (eólica e solar) com fábricas e cidades próximas**. A solução promove:
