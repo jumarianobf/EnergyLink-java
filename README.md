@@ -9,27 +9,25 @@ O projeto visa resolver um dos maiores desafios no setor de energia sustentável
 
   
 ## Funcionalidades Principais
-1. **Cadastro e Gestão dos Pontos de Produção de Energia**  
-   - Cada ponto de geração pode se registrar na plataforma, com dados como:
-     - Capacidade de geração.
-     - Localização.
-     - Histórico de produção.
-   - Backend desenvolvido em **.NET** e **Java Advanced** para garantir escalabilidade.
+1. **Cadastro de Entidades**  
+  - Tipos de Usuários: Gestão e cadastro de diferentes tipos de usuários no sistema, com funcionalidades específicas para cada perfil.
+  - Comunidade Produtora: Cadastro e gerenciamento de comunidades responsáveis pela produção de energia.
+  - Fábrica Parceira: Registro de fábricas parceiras, com informações relevantes para o vínculo com o sistema.
 
 2. **Marketplace para Compra e Venda de Energia**  
    - Interface para compradores e vendedores realizarem transações diretas de energia.  
    - Disponível como aplicativo mobile em **Kotlin** ou uma interface web.
 
-3. **Otimização de Preços com Machine Learning**  
-   - Preços dinâmicos baseados em variáveis como:
-     - Demanda.
-     - Condições climáticas.
-     - Horários de pico.
+3. **Agente com Machine Learning**  
+   - O agente utiliza a funcionalidade de envio de e-mails automatizado para comunicar os usuários, fabricas e comunidades.
    - Modelos desenvolvidos em **Python**.
 
-4. **Monitoramento e Relatórios**  
-   - Monitoramento e controle das transações.  
-   - Backend processa dados utilizando **Java Advanced** e **.NET**.
+4. **Monitoramento e Controle**
+    - Monitoramento de Energia: Ferramenta para monitoramento em tempo real da geração e consumo de energia nas comunidades produtoras.
+    - Tipo de Energia da Comunidade: Definição e controle do tipo de energia utilizada por cada comunidade (solar, eólica, etc.).
+  
+5. **Gestão Financeira**
+    - Transações e Pagamentos: Gestão de transações financeiras, incluindo registros de pagamentos, recebimentos e sua relação com as atividades das comunidades e fábricas parceiras.
 
 ## 
 
@@ -38,7 +36,7 @@ O projeto visa resolver um dos maiores desafios no setor de energia sustentável
 
 ### Arquitetura Geral
 - **Backend**: `.NET` e `Java Advanced` para gestão de dados, segurança e escalabilidade.  
-- **Machine Learning**: Modelos preditivos em `Python`  para envio de e-mails automatizados, baseado em eventos específicos ou condições predefinidas.  
+- **Machine Learning**: Agente para envio de e-mails automatizados, baseado em eventos específicos ou condições predefinidas.  
 - **Mastering Relational and non-relational database **:  Modelagem de Banco de Dados relacional e não relacional, utilizando práticas de modelagem de dados na 3ª Forma Normal (3FN) e implementando no banco de dados Oracle. 
 - **Interface de Usuário**: Aplicativo em `Kotlin` ou interface web para acesso ao sistema.
 - **DevOps Tools e Cloud Computing**: Implementação de 2 (duas) `Virtual Machines` em nuvem (preferencialmente Azure), sendo uma com aplicação frontend e outra com o backend (API e banco de dados), simulando um ambiente de desenvolvimento.
