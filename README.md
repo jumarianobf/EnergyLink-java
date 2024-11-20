@@ -1,17 +1,50 @@
-# Parrot Tech
+# Energy Link
+#### # Plataforma de Distribuição de Energia Sustentável para Cidades Próximas 🌍⚡
 
-## Integrantes do Grupo
+## Descrição do Projeto
+Este repositório contém o desenvolvimento de uma **plataforma digital para conectar comunidades produtoras de energia limpa (eólica e solar) com fábricas e cidades próximas**. A solução promove:
+- **Autossuficiência energética regional**.
+- **Redução de custos** para empresas e comunidades.
+- **Sustentabilidade ambiental**, incentivando o uso de energia limpa.
 
-### Caio Eduardo Nascimento Martins (RM554025)
-**Responsável pelo desenvolvimento em Advanced Business Development with .NET, DevOps Tools & Cloud Computing e Compliance, Quality Assurance & Tests.**
-
-### Julia Mariano Barsotti Ferreira (RM552713)  
-**Responsável pelo desenvolvimento Java Advanced, Mobile Application Development e Compliance, Quality Assurance & Tests.**
-
-### Leonardo Gaspar Saheb (RM553383)  
-**Responsável pelo desenvolvimento em Mastering Relational and Non-Relational Database, Disruptive Architectures: IoT, IoB & Generative AI e Compliance, Quality Assurance & Tests.**
 
   ##
+
+  
+## Funcionalidades Principais
+1. **Cadastro e Gestão dos Pontos de Produção de Energia**  
+   - Cada ponto de geração pode se registrar na plataforma, com dados como:
+     - Capacidade de geração.
+     - Localização.
+     - Histórico de produção.
+   - Backend desenvolvido em **.NET** e **Java Advanced** para garantir escalabilidade.
+
+2. **Marketplace para Compra e Venda de Energia**  
+   - Interface para compradores e vendedores realizarem transações diretas de energia.  
+   - Disponível como aplicativo mobile em **Kotlin** ou uma interface web.
+
+3. **Otimização de Preços com Machine Learning**  
+   - Preços dinâmicos baseados em variáveis como:
+     - Demanda.
+     - Condições climáticas.
+     - Horários de pico.
+   - Modelos desenvolvidos em **Python**.
+
+4. **Monitoramento e Relatórios**  
+   - Monitoramento e controle das transações.  
+   - Backend processa dados utilizando **Java Advanced** e **.NET**.
+
+## 
+
+
+## Fluxo Tecnológico
+
+### Arquitetura Geral
+- **Backend**: `.NET` e `Java Advanced` para gestão de dados, segurança e escalabilidade.  
+- **Machine Learning**: Modelos preditivos em `Python`  para envio de e-mails automatizados, baseado em eventos específicos ou condições predefinidas.  
+- **Mastering Relational and non-relational database **:  Modelagem de Banco de Dados relacional e não relacional, utilizando práticas de modelagem de dados na 3ª Forma Normal (3FN) e implementando no banco de dados Oracle. 
+- **Interface de Usuário**: Aplicativo em `Kotlin` ou interface web para acesso ao sistema.
+- **DevOps Tools e Cloud Computing**: Implementação de 2 (duas) `Virtual Machines` em nuvem (preferencialmente Azure), sendo uma com aplicação frontend e outra com o backend (API e banco de dados), simulando um ambiente de desenvolvimento.
 
 ## Pré-requisitos
 Para rodar este projeto, você precisará ter os seguintes itens instalados em sua máquina:
@@ -23,11 +56,19 @@ Para rodar este projeto, você precisará ter os seguintes itens instalados em s
 Documentação de Configuração do Banco de Dados
 #### Configurações do DataSource:
 ```
-spring.datasource.url=jdbc:mysql://localhost/challenge?createDatabaseIfNotExist=true&useSSL=true
+spring.application.name=globalsolution
+spring.datasource.url=jdbc:oracle:thin:@oracle.fiap.com.br:1521:orcl
 spring.datasource.username=<SEU_USUARIO>
 spring.datasource.password=<SUA_SENHA>
-spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.format_sql=true
+```
+Faça isso a primeira vez para criar o banco de dados
+```
+spring.jpa.hibernate.ddl-auto=create
+```
+
+depois mude para update para atualizar a estrutura do banco de dados sem perder dados:
+```
 spring.jpa.hibernate.ddl-auto=update
 ```
 
@@ -39,12 +80,12 @@ spring.jpa.hibernate.ddl-auto=update
 Primeiro, clone o repositório do projeto para sua máquina local. No terminal, execute:
 
 ```bash
-git clone https://github.com/seu-usuario/odontoprev-project.git
+git clone https://github.com/seu-usuario/EnergyLink-java.git
 ```
 
 Acesse o diretório do projeto clonado:
 ```
-cd odontoprev-project
+cd energyLink-project
 ```
 Compile o projeto usando o Maven, pulando os testes. Execute o seguinte comando:
 ```
@@ -54,96 +95,42 @@ Após a compilação, o Maven irá gerar um arquivo JAR no diretório target. O 
 ```
 <seu_diretorio_do_projeto>\target\<nome_do_projeto>-<versao>.jar
 ```
-E então é so rodar seu Application!
+Acessar a Aplicação
+A aplicação agora está rodando dentro do container. Abra o navegador e acesse a seguinte URL:
+```
+http://localhost:8080
+```
+Com Swagger:
+```
+http://localhost:8080/swagger-ui/index.html#/
+```
 
   ##
   
-## Imagem dos Diagramas
-### Sprint 1 
-![Diagrama de Entidade e Relacionamento (DER)](https://github.com/jumarianobf/Odontoprev/blob/main/imagens/Relational_Sprint1.png)
-
-![Diagrama de Classes de Entidade](https://github.com/jumarianobf/Odontoprev/blob/main/imagens/Odontoprev.drawio%20(sprint_1).png)
-
 ##
 
-### Sprint 2
-![Diagrama de Entidade e Relacionamento (DER)](https://github.com/jumarianobf/Odontoprev/blob/main/imagens/DER_Sprint_2.png)
+### Modelagem do Banco de Dados
+![Diagrama de Entidade e Relacionamento (DER)](https://github.com/jumarianobf/EnergyLink-java/blob/main/imagens/Relacionamento.png)
 
-![Diagrama de Classes de Entidade](https://github.com/jumarianobf/Odontoprev/blob/main/imagens/Odontoprev.drawio%20(sprint_2).png)
 
 ## Vídeo de Apresentação
 
-### Link video apresentando proposta tecnológica -> https://www.youtube.com/watch?v=9aIgBieK4Hk
+### Link do Vídeo Pitch -> 
+### Link do Vídeo demonstrando o software funcionando -> 
   
   ##
 
 # Documentação da API
 
-## Usuários
-- **GET** `/api/usuarios/listar`: Lista todos os usuários.
-- **POST** `/api/usuarios/cadastrar`: Cria um novo usuário.
-- **GET** `/api/usuarios/{id}`: Retorna os detalhes de um id (do usuario) específico.
-- **PUT** `/api/usuarios/{id}`: Atualiza as informações de um usuário.
-- **DELETE** `/api/usuarios/{id}`: Remove um usuário.
 
-## Previsões
-- **GET** `/api/previsao-usuario/listar`: Lista todas as previsões de usuários.
-- **POST** `/api/previsao-usuario/cadastrar`: Cria uma nova previsão de usuário.
-- **GET** `/api/previsao-usuario/{id}`: Retorna os detalhes de uma previsão específica.
-- **PUT** `/api/previsao-usuario/{id}`: Atualiza uma previsão de usuário.
-- **DELETE** `/api/previsao-usuario/{id}`: Remove uma previsão de usuário.
 
----
+## Desenvolvedores
 
-## Atendimentos
-- **GET** `/api/atendimento-usuario/listar`: Lista todos os atendimentos de usuários.
-- **POST** `/api/atendimento-usuario/cadastrar`: Cria um novo atendimento de usuário.
-- **GET** `/api/atendimento-usuario/{id}`: Retorna os detalhes de um atendimento específico.
-- **PUT** `/api/atendimento-usuario/{id}`: Atualiza um atendimento de usuário.
-- **DELETE** `/api/atendimento-usuario/{id}`: Remove um atendimento de usuário.
+### Caio Eduardo Nascimento Martins (RM554025)
+**Responsável pelo desenvolvimento em Advanced Business Development with .NET, DevOps Tools & Cloud Computing e Compliance, Quality Assurance & Tests.**
 
----
+### Julia Mariano Barsotti Ferreira (RM552713)  
+**Responsável pelo desenvolvimento Java Advanced, Mobile Application Development e Compliance, Quality Assurance & Tests.**
 
-## Imagens
-- **GET** `/api/imagem-usuario/listar`: Lista todas as imagens de usuários.
-- **POST** `/api/imagem-usuario/cadastrar`: Adiciona uma nova imagem de usuário.
-- **GET** `/api/imagem-usuario/{id}`: Retorna os detalhes de uma imagem específica.
-- **PUT** `/api/imagem-usuario/{id}`: Atualiza as informações de uma imagem de usuário.
-- **DELETE** `/api/imagem-usuario/{id}`: Remove uma imagem de usuário.
-
----
-
-## Endereços
-- **GET** `/api/endereco-usuario/listar`: Lista todos os endereços de usuários.
-- **POST** `/api/endereco-usuario/cadastrar`: Adiciona um novo endereço de usuário.
-- **GET** `/api/endereco-usuario/{id}`: Retorna os detalhes de um endereço específico.
-- **PUT** `/api/endereco-usuario/{id}`: Atualiza as informações de um endereço de usuário.
-- **DELETE** `/api/endereco-usuario/{id}`: Remove um endereço de usuário.
-
----
-
-## Contatos
-- **GET** `/api/contato-usuario/listar`: Lista todos os contatos de usuários.
-- **POST** `/api/contato-usuario/cadastro`: Adiciona um novo contato de usuário.
-- **GET** `/api/contato-usuario/{id}`: Retorna os detalhes de um contato específico.
-- **PUT** `/api/contato-usuario/{id}`: Atualiza as informações de um contato de usuário.
-- **DELETE** `/api/contato-usuario/{id}`: Remove um contato de usuário.
-
----
-
-## Dentistas
-- **GET** `/api/dentista/listar`: Lista todos os dentistas.
-- **POST** `/api/dentista/cadastrar`: Adiciona um novo dentista.
-- **GET** `/api/dentista/{id}`: Retorna os detalhes de um dentista específico.
-- **PUT** `/api/dentista/{id}`: Atualiza as informações de um dentista.
-- **DELETE** `/api/dentista/{id}`: Remove um dentista.
-
----
-
-## Clínicas
-- **GET** `/api/clinica/listar`: Lista todas as clínicas.
-- **POST** `/api/clinica/cadastrar`: Adiciona uma nova clínica.
-- **GET** `/api/clinica/{id}`: Retorna os detalhes de uma clínicas específica.
-- **PUT** `/api/clinica/{id}`: Atualiza as informações de uma clínica.
-- **DELETE** `/api/clinica/{id}`: Remove uma clínica.
-
+### Leonardo Gaspar Saheb (RM553383)  
+**Responsável pelo desenvolvimento em Mastering Relational and Non-Relational Database, Disruptive Architectures: IoT, IoB & Generative AI e Compliance, Quality Assurance & Tests.**
