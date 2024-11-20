@@ -90,7 +90,7 @@ Após a compilação, o Maven irá gerar um arquivo JAR no diretório target. O 
 ```
 <seu_diretorio_do_projeto>\target\<nome_do_projeto>-<versao>.jar
 ```
-Acessar a Aplicação
+## Acessar a Aplicação
 A aplicação agora está rodando dentro do container. Abra o navegador e acesse a seguinte URL:
 ```
 http://localhost:8080
