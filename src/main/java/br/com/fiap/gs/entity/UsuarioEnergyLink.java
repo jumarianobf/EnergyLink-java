@@ -12,7 +12,7 @@ import lombok.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "Usuario_EnergyLink")
+@Table(name = "USUARIO_ENERGYLINK")
 public class UsuarioEnergyLink {
 
     @Id

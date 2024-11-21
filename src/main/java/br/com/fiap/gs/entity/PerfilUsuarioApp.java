@@ -19,19 +19,16 @@ public class PerfilUsuarioApp {
     private Long idPerfil;
 
     @ManyToOne
-    @JoinColumn(name = "id_usuario", nullable = false)
-    @NotNull
-    private UsuarioEnergyLink idUsuario;
-
-    @ManyToOne
-    @JoinColumn(name = "id_comunidade", nullable = false)
-    @NotNull
+    @JoinColumn(name = "id_comunidade", referencedColumnName = "id_comunidade")
     private ComunidadeProdutora idComunidade;
 
     @ManyToOne
-    @JoinColumn(name = "id_fabrica", nullable = false)
-    @NotNull
+    @JoinColumn(name = "id_fabrica", referencedColumnName = "id_fabrica")
     private FabricaParceira idFabrica;
+
+    @ManyToOne
+    @JoinColumn(name = "id_usuario", referencedColumnName = "id_usuario")
+    private UsuarioEnergyLink idUsuario;
 
     @Column(name = "descricao_perfil", length = 50)
     private String descricaoPerfil;
