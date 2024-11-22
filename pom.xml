@@ -11,7 +11,7 @@
 	<groupId>br.com.fiap</groupId>
 	<artifactId>global</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>challenge</name>
+	<name>global</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>

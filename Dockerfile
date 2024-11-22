@@ -1,17 +1,14 @@
-# Usar uma imagem do OpenJDK 17
-FROM openjdk:17-jdk-slim
+# Usando a imagem base do OpenJDK
+FROM openjdk:17-jdk-alpine
 
-# Diretório onde a aplicação será copiada
+# Define o diretório de trabalho dentro do container
 WORKDIR /app
 
-# Copiar o arquivo JAR do diretório target para o contêiner
+# Copia o arquivo JAR da sua aplicação para o container
 COPY target/global-0.0.1-SNAPSHOT.jar app.jar
 
-# Expor a porta 8080, que é a porta padrão do Spring Boot
+# Expõe a porta que a aplicação vai usar
 EXPOSE 8080
 
-# Definir o comando para rodar a aplicação
-ENTRYPOINT ["java", "-jar", "/app/app.jar"]
-
-# CMD pode ser utilizado para configurar argumentos padrão, mas não é necessário nesse caso
-# CMD ["--server.port=8080"]
+# Comando para rodar a aplicação
+ENTRYPOINT ["java", "-jar", "app.jar"]
