@@ -61,7 +61,7 @@ public class UsuarioEnergyLinkImpl implements UsuarioEnergyLinkService {
         UsuarioEnergyLink existingUsuario = usuarioRepository.findById(id)
                         .orElseThrow( () -> new RuntimeException("Usuario com id não encontrado: " + id));
 
-        TipoUsuario tipoUsuario = tipoUsuarioRepository.findById(id)
+        TipoUsuario tipoUsuario = tipoUsuarioRepository.findById(usuario.getIdTipoUsuario())
                 .orElseThrow(() -> new RuntimeException("Tipo de Usuario não encontrado" + id));
 
         existingUsuario.setNomeUsuario(usuario.getNomeUsuario());

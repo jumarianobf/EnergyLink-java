@@ -55,7 +55,7 @@ public class LocalizacaoImpl implements LocalizacaoService {
         Localizacao existingLocalizacao = localizacaoRepository.findById(id)
                 .orElseThrow(() -> new NoSuchElementException("Localização não encontrada"));
 
-        Cidade cidade = cidadeRepository.findById(id)
+        Cidade cidade = cidadeRepository.findById(localizacao.getIdCidade())
                         .orElseThrow(() -> new NoSuchElementException("Cidade não encontrada"));
 
         existingLocalizacao.setCep(localizacao.getCep());
