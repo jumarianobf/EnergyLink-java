@@ -111,7 +111,7 @@ http://localhost:8080/swagger-ui/index.html#/
 ## Vídeo de Apresentação
 
 ### Link do Vídeo Pitch -> 
-### Link do Vídeo demonstrando o software funcionando -> 
+### Link do Vídeo demonstrando o software funcionando -> https://youtu.be/BxEr4_KuC9k
   
   ##
 
