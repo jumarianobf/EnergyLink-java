@@ -115,9 +115,12 @@ http://localhost:8080/swagger-ui/index.html#/
   
   ##
 
-# Documentação da API
+  ## Para baixar a imagem basta executar esse comando no seu terminal
+```
+  docker push jumarianobf/energy-link-api:tag  
+```
 
-
+##
 
 ## Desenvolvedores
 
