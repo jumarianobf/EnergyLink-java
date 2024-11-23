@@ -100,6 +100,11 @@ Com Swagger:
 http://localhost:8080/swagger-ui/index.html#/
 ```
 
+  ## Para baixar a imagem do dockerhub basta executar esse comando no seu terminal
+```
+  docker push jumarianobf/energy-link-api:tag  
+```
+
   ##
   
 ##
@@ -112,13 +117,6 @@ http://localhost:8080/swagger-ui/index.html#/
 
 ### Link do Vídeo Pitch -> https://www.youtube.com/watch?v=oiDLo_1C6LA
 ### Link do Vídeo demonstrando o software funcionando -> https://youtu.be/BxEr4_KuC9k
-  
-  ##
-
-  ## Para baixar a imagem basta executar esse comando no seu terminal
-```
-  docker push jumarianobf/energy-link-api:tag  
-```
 
 ##
 
